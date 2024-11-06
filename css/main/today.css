@@ -1,0 +1,228 @@
+@charset "utf-8";
+@font-face {
+  font-family: "Uiyeun";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105@1.1/Uiyeun.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HakgyoansimDunggeunmisoTTF-B";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimDunggeunmisoTTF-B.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+.today {
+  display: block;
+  position: relative;
+  margin: auto;
+  /* margin: 20px 20px; */
+}
+.today-inner {
+  margin: 70px 20px;
+}
+.title-wrap {
+  margin-bottom: 50px;
+  /* font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif"; */
+}
+.today-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 100px;
+  font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
+}
+.today-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
+}
+.today-sale {
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
+}
+.today-item {
+  font-size: 28px;
+  font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
+}
+.today-saleprice {
+  display: flex;
+  gap: 10px;
+}
+.salepercent {
+  font-size: 40px;
+  font-weight: bold;
+  color: red;
+}
+.saleprice {
+  font-size: 40px;
+  font-weight: bold;
+}
+.won {
+  font-size: 24px;
+  font-weight: bold;
+  vertical-align: baseline;
+}
+.notsaleprice {
+  font-size: 32px;
+  color: #b5b5b5;
+  text-decoration: line-through;
+}
+.today-notice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.today-notice p {
+  color: #6d6d6d;
+}
+.today-img {
+  margin-top: 20px;
+  width: 100%;
+  /* background-color: aqua; */
+}
+.today-img img {
+  width: 100%;
+  border-radius: 20px;
+}
+.today-notice-img {
+  width: 20px;
+  height: 20px;
+}
+/* today-time (특가 시간)*/
+.timer_area {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #6d6d6d1a;
+  width: 125px;
+  border-radius: 10px;
+}
+
+/* 필터를 사용해 이미지 색상을 변경 */
+.timer_area img {
+  /* filter: sepia(1) saturate(8) hue-rotate(90deg);  */
+  /* 필터로 색상 변경 */
+  width: 20px;
+  height: 20px;
+  filter: invert(100%) brightness(0%);
+}
+
+#timer365 {
+  font-size: 20px;
+  /* margin-left: 10px; */
+  color: #000;
+}
+
+/* 장바구니 이미지 */
+.bag-shopping {
+  width: 30px;
+  height: 30px;
+}
+.bag-button {
+  /* background: #fff; */
+  border-radius: 20px;
+  border: #333;
+  width: 40px;
+  height: 40px;
+}
+
+/* 특가 상품 반응형 */
+@media screen and (max-width: 900px) {
+  .today-sale {
+    font-size: 26px;
+  }
+  .today-item {
+    font-size: 24px;
+  }
+  .salepercent {
+    font-size: 36px;
+    font-weight: bold;
+    color: red;
+  }
+  .saleprice {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  .won {
+    font-size: 24px;
+    font-weight: bold;
+    vertical-align: baseline;
+  }
+  .notsaleprice {
+    font-size: 30px;
+    color: #b5b5b5;
+    text-decoration: line-through;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .today-left {
+    margin-right: 10px;
+  }
+  .today-sale {
+    font-size: 24px;
+  }
+  .today-item {
+    font-size: 22px;
+  }
+  .salepercent {
+    font-size: 33px;
+    font-weight: bold;
+    color: red;
+  }
+  .saleprice {
+    font-size: 33px;
+    font-weight: bold;
+  }
+  .won {
+    font-size: 22px;
+    font-weight: bold;
+    vertical-align: baseline;
+  }
+  .notsaleprice {
+    font-size: 28px;
+    color: #b5b5b5;
+    text-decoration: line-through;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .today-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-direction: column;
+  }
+  .today-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+  }
+  .today-img {
+    margin-top: 20px;
+    width: 100%;
+    /* background-color: aqua; */
+  }
+  .today-img img {
+    width: 100%;
+    max-width: 300px;
+  }
+  #timer365 {
+    font-size: 18px;
+    /* margin-left: 10px; */
+  }
+  .timer_area {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 561px) {
+  .title-sub {
+    white-space: normal;
+  }
+}

@@ -1,0 +1,483 @@
+@charset "utf-8";
+/* 메인페이지 갤러리 */
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
+
+.gallery {
+  width: 100%;
+  height: auto;
+  background-color: #fff9ea;
+  margin: 20px auto;
+  /* margin-top: 10px; */
+  font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
+}
+.gallery h2 {
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 36px;
+  font-weight: bold;
+  background-color: #fff;
+}
+.gallery-inner {
+  width: 100%;
+  height: auto;
+}
+.gallery-inner ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  min-width: 280px;
+}
+.gallery-inner ul li {
+  width: calc(100% / 4 - 10px);
+  /* background-color: blueviolet; */
+}
+.gallery-inner p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  /* font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif'; */
+}
+.img-wrap {
+  width: 100%;
+  /* background-color: rgb(226, 43, 174); */
+  overflow: hidden;
+  border-radius: 10px;
+}
+.img-wrap > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s linear;
+  /* border-radius: 10px; */
+}
+.img-wrap > img:hover {
+  transform: scale(1.1);
+  /* border-radius: 10px; */
+}
+
+/* 갤러리 더보기 버튼 */
+.galbtn-wrap {
+  /* width: 100%; */
+  background-color: #fff;
+  padding: 10px 10px;
+}
+.galbtn {
+  display: flex; /* 플렉스 박스로 변경 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  min-width: 375px;
+  min-height: 70px;
+  background-color: #f5f5f7;
+  border: none;
+  border-radius: 30px;
+  margin: 0 auto; /* 부모 요소에서 가로 방향으로 중앙 정렬 */
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.galbtn:hover {
+  background-color: #ebebeb;
+}
+.galbtn a {
+  font-size: 30px;
+  color: #333;
+  font-weight: 500;
+  padding: 10px;
+  display: block; /* a 태그를 블록 요소로 설정 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* 갤러리 상세페이지 */
+.gallery-wrap {
+  width: 100%;
+  height: auto;
+  font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
+}
+.gallery-visual {
+  width: 100%;
+  height: 550px;
+  padding-top: 100px;
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+  display: flex;
+}
+.gallery-visual img {
+  width: 100%;
+  /* height: calc(100% + 100px); */
+  position: absolute;
+  /* top: -100px; */
+}
+.gallery-visual .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 어두운 반투명 배경 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-visual .overlay h2 {
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+}
+/* .gallery-visual h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font-size: 30px;
+} */
+
+/* 갤러리 상세페이지 */
+.gallery-cate {
+  width: 100%;
+  margin-top: 20px;
+}
+.gallery-cate h2{
+  font-size: 36px;
+  margin: 70px 0;
+  text-align: center;
+}
+.gallery-wh {
+  list-style: none;
+  /* padding-left:30px; */
+  /* margin: 10px 10px; */
+  /* margin: 10px; */
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: start; */
+  gap: 20px;
+  /* background-color: aqua; */
+  width: 100%;
+}
+
+.gallery-wh li {
+  width: calc(100% / 3 - 14px);
+}
+
+.gallery-item {
+  /* border: 1px solid #ddd; */
+  /* padding: 10px; */
+  /* display: inline; */
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  /* overflow: hidden; */
+  /* min-width: 280px; */
+}
+.gallery-item-img {
+  width: 100%;
+  height: 260px;
+
+  overflow: hidden;
+  object-fit: cover;
+}
+.gallery-description {
+  margin-top: 10px;
+}
+.gallery-description p {
+  font-weight: 400;
+  text-align: center;
+}
+.gallery-item-img > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s linear;
+}
+.gallery-item-img > img:hover {
+  transform: scale(1.1);
+}
+/* 갤러리 상세게시판  */
+.gallery-into {
+  padding-top: 100px;
+}
+.gallery-into p {
+  font-family: "IBMPlexSansKR-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.bbsSubject,
+.bbsBody {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px 20px;
+}
+.bbsBody img {
+  width: 80%;
+}
+.bbsSubject h3,
+.bbsSubject p {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+.bbsSubject h3 {
+  font-size: 16px;
+  color: #222;
+}
+.bbsSubject p {
+  font-size: 14px;
+  color: #888;
+}
+.bbsBody {
+  padding: 40px 20px;
+  border-bottom: 1px solid #ddd;
+}
+.bbs-de {
+  text-align: center;
+  font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
+}
+.bbsBtn ul {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.bbsBtn ul li {
+  width: 100px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
+}
+.gallery-wh {
+  width: 90%;
+  margin: 70px auto;
+}
+.gallery-inner ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px 30px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+/* 반응형 */
+@media screen and (max-width: 1300px) {
+  .gallery-item-img {
+    height: 20vw;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .gallery h2 {
+    text-align: center;
+    padding: 30px 10px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #fff;
+  }
+  .gallery-inner ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 20px 0;
+  }
+
+
+  .gallery-inner p {
+    text-align: center;
+  }
+
+  .img-wrap {
+    width: 100%;
+    /* background-color: rgb(226, 43, 174); */
+    overflow: hidden;
+  }
+  .img-wrap > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s linear;
+  }
+  .img-wrap > img:hover {
+    transform: scale(1.1);
+  }
+}
+@media screen and (max-width: 1180px) {
+  .gallery-visual {
+    padding-top: 90px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .img-wrap ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px 30px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 400;
+  }
+  .gallery h2 {
+    text-align: center;
+    padding: 30px 10px;
+    font-size: 27px;
+    font-weight: bold;
+    background-color: #fff;
+  }
+  .gallery-inner p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 10px;
+  }
+}
+@media screen and (max-width: 875px) {
+  .gallery-visual img {
+    width: auto;
+    height: calc(100% - 90px);
+    position: absolute;
+  }
+}
+@media screen and (max-width: 800px) {
+  .gallery-inner ul {
+    display: flex;
+    flex-wrap: wrap;
+    /* padding: 50px 30px; */
+  }
+  .gallery-inner p {
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    padding: 10px 10px;
+  }
+  .gallery-inner ul li {
+    width: calc(100% / 2 - 30px);
+    /* background-color: blueviolet; */
+  }
+  .gallery-wh {
+    width: 80%;
+  }
+  .gallery-wh li {
+    width: calc(100% / 2 - 11px);
+  }
+  .gallery-item-img {
+    height: 30vw;
+  }
+  .bbs-de {
+    font-size: 15px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .gallery-visual {
+    padding-top: 70px;
+  }
+  .gallery-visual img {
+    width: auto;
+    height: calc(100% - 70px);
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 689px) {
+  .gallery-inner ul {
+    width: 70%;
+    margin: auto;
+  }
+  .gallery-inner ul li {
+    width: calc(100% / 1 - 40px);
+    /* background-color: blueviolet; */
+    margin: 10px;
+  }
+  .gallery-inner p {
+    font-size: 17px;
+    text-align: center;
+    padding: 10px 10px;
+  }
+
+  /* 갤러리 더보기 버튼 */
+  .galbtn-wrap {
+    /* width: 100%; */
+    background-color: #fff;
+    padding: 10px 10px;
+  }
+  .galbtn {
+    display: flex; /* 플렉스 박스로 변경 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    min-width: 250px;
+    min-height: 60px;
+    background-color: #f5f5f7;
+    border: none;
+    border-radius: 30px;
+    margin: 0 auto; /* 부모 요소에서 가로 방향으로 중앙 정렬 */
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+
+  .galbtn:hover {
+    background-color: #ebebeb;
+  }
+  .galbtn a {
+    font-size: 21px;
+    color: #333;
+    font-weight: 500;
+    padding: 10px;
+    display: block; /* a 태그를 블록 요소로 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+  }
+  .bbs-de {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .gallery-wh {
+    width: 70%;
+    min-width: 230px;
+    min-height: 250px;
+  }
+  .gallery-wh li {
+    width: calc(100% / 1);
+  }
+  .gallery-inner ul {
+    width: 90%;
+    margin: auto;
+  }
+  .gallery-item-img {
+    height: 50vw;
+  }
+  .bbs-de {
+    font-size: 14px;
+  }
+  /* .gallery-visual img {
+    height: 72vw;
+    min-height: 330px;
+  } */
+}
+
+@media screen and (max-width: 500px) {
+  .gallery-wh {
+    width: 70%;
+    min-width: 230px;
+    min-height: 250px;
+  }
+  .gallery-wh li {
+    width: calc(100% / 1);
+  }
+  .gallery-inner ul {
+    width: 90%;
+    margin: auto;
+  }
+  .gallery-item-img {
+    height: 50vw;
+  }
+  .bbs-de {
+    font-size: 12px;
+  }
+}

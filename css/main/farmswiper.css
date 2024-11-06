@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+.farmswiper {
+  position: relative;
+  display: block;
+}
+
+.farmswiper img {
+  border-radius: 10%;
+  max-width: 100%;
+}
+
+.farmswiper .title {
+  line-height: 150%;
+  margin-top: 50px;
+}
+
+/* sw-farmswiper 영역 안에서만 적용되는 스타일 */
+.sw-farmswiper .swiper-slide .overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.sw-farmswiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+/* .sw-farmswiper 안의 swiper-slide만 스타일 적용 */
+.sw-farmswiper .swiper-slide {
+  position: relative;
+}
+
+.sw-farmswiper .produce-img {
+  width: 100%;
+  border-radius: 10%;
+  transition: opacity 0.5s ease;
+  opacity: 1; /* 기본적으로 이미지가 보이도록 설정 */
+}
+
+.sw-farmswiper .recipe-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5); /* 어두운 배경 */
+  opacity: 0; /* 기본적으로 숨김 */
+  transition: opacity 0.5s ease;
+  border-radius: 10%;
+}
+
+/* 모든 슬라이드에 대해 호버 시 이미지 전환 효과 적용 */
+.sw-farmswiper .swiper-slide:hover .produce-img {
+  opacity: 0; /* 호버 시 기본 이미지를 숨기기 */
+}
+
+.sw-farmswiper .swiper-slide:hover .recipe-overlay {
+  opacity: 1; /* 호버 시 hover 이미지를 보이기 */
+}
+
+/* 중앙 슬라이드에 있을 때도 호버 효과와 동일하게 적용 */
+.sw-farmswiper .swiper-slide-active .produce-img {
+  opacity: 0; /* 중앙 슬라이드일 때도 기본 이미지 숨기기 */
+}
+
+.sw-farmswiper .swiper-slide-active .recipe-overlay {
+  opacity: 1; /* 중앙 슬라이드일 때도 hover 이미지를 보이도록 설정 */
+}
+
+/* 중앙 슬라이드에서도 호버 효과가 유지되도록 설정 */
+.sw-farmswiper .swiper-slide-active:hover .produce-img {
+  opacity: 0; /* 중앙 슬라이드에서도 호버 시 기본 이미지를 숨기기 */
+}
+
+.sw-farmswiper .swiper-slide-active:hover .recipe-overlay {
+  opacity: 1; /* 중앙 슬라이드에서도 호버 시 hover 이미지를 보이기 */
+}
